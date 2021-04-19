@@ -28,13 +28,4 @@ public class Salary implements Send<Integer> {
     public Integer getContent() {
         return getSalary();
     }
-
-    @Override
-    public String toString() {
-        return "SalaryService{" +
-                "from='" + from + '\'' +
-                ", to='" + to + '\'' +
-                ", salary=" + salary +
-                '}';
-    }
 }

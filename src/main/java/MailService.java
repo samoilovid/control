@@ -19,6 +19,5 @@ public class MailService<T> implements Consumer<Send<T>> {
     @Override
     public void accept(Send<T> send) {
         mailBox.put(send.getTo(), Arrays.asList(send.getContent()));
-        System.out.println(send);
     }
 }

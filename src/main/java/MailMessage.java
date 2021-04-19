@@ -23,12 +23,5 @@ public class MailMessage implements Send<String> {
         return content;
     }
 
-    @Override
-    public String toString() {
-        return "MailMessage{" +
-                "from='" + from + '\'' +
-                ", to='" + to + '\'' +
-                ", content='" + content + '\'' +
-                '}';
-    }
+
 }
