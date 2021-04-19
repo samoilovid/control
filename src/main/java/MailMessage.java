@@ -22,4 +22,13 @@ public class MailMessage implements Send<String> {
     public String getContent() {
         return content;
     }
+
+    @Override
+    public String toString() {
+        return "MailMessage{" +
+                "from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }

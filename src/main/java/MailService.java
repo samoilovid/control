@@ -11,16 +11,14 @@ public class MailService<T> implements Consumer<Send<T>> {
         }
     };
 
-
     public Map<String, List<T>> getMailBox() {
 
         return mailBox;
     }
 
-
     @Override
     public void accept(Send<T> send) {
-
         mailBox.put(send.getTo(), Arrays.asList(send.getContent()));
+        System.out.println(send);
     }
 }
