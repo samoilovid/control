@@ -22,6 +22,4 @@ public class MailMessage implements Send<String> {
     public String getContent() {
         return content;
     }
-
-
 }
