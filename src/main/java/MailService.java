@@ -18,6 +18,14 @@ public class MailService<T> implements Consumer<Send<T>> {
 
     @Override
     public void accept(Send<T> send) {
-        mailBox.put(send.getTo(), Arrays.asList(send.getContent()));
+        List <T> list = new ArrayList<>();
+        String key = send.getTo();
+        T content = send.getContent();
+
+       if (mailBox.containsKey(key)){
+           list = mailBox.get(key);
+       }
+       list.add(content);
+        mailBox.put(key, list);
     }
 }
